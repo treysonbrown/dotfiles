@@ -1,0 +1,193 @@
+/* =============================================================================
+   Gruvbox Waybar Theme
+   Based on Gruvbox Dark Soft
+   ========================================================================== */
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono Nerd Font", "FiraCode Nerd Font", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* --- Tooltips --- */
+tooltip {
+  background: #282828; /* Gruvbox bg */
+  border-radius: 8px;
+  border: 1px solid #928374; /* Gruvbox gray */
+}
+
+tooltip label {
+  color: #ebdbb2; /* Gruvbox fg */
+}
+
+/* --- Workspaces --- */
+#workspaces {
+  background: #282828;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  border-radius: 16px;
+  border: 1px solid #928374;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: #a89984; /* Gruvbox gray 2 */
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+  color: #fabd2f; /* Gruvbox yellow */
+  background: #3c3836; /* Gruvbox bg1 */
+  min-width: 40px;
+  transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+  color: #d5c4a1; /* Gruvbox fg2 */
+  background: #504945; /* Gruvbox bg2 */
+}
+
+/* --- Launcher --- */
+#custom-launcher {
+  background: #282828;
+  color: #83a598; /* Gruvbox Blue/Aqua */
+  padding: 5px 10px; /* Reduced horizontal padding */
+  margin: 5px 5px;
+  border-radius: 16px;
+  font-size: 20px; /* Slightly larger icon */
+  min-width: 30px; /* Force a minimum width for centering */
+  margin-right: 10px;
+}
+
+/* --- Hardware --- */
+#cpu,
+#memory {
+  background: #282828;
+  color: #ebdbb2;
+  padding: 5px 10px;
+  margin: 5px 0px;
+}
+
+#cpu {
+  border-radius: 16px 0 0 16px;
+  margin-left: 5px;
+  color: #fb4934; /* Red */
+}
+
+#memory {
+  border-radius: 0 16px 16px 0;
+  margin-right: 5px;
+  color: #b8bb26; /* Green */
+}
+
+/* --- Clock --- */
+#clock {
+  background: #282828;
+  color: #ebdbb2;
+  padding: 5px 15px;
+  margin: 5px 5px;
+  border-radius: 16px;
+  border: 1px solid #928374;
+}
+
+/* --- Right Modules --- */
+#pulseaudio,
+#pulseaudio.mic,
+#backlight,
+#network,
+#battery,
+#tray {
+  background: #282828;
+  color: #ebdbb2;
+  padding: 5px 10px;
+  margin: 5px 0;
+}
+
+#pulseaudio {
+  border-radius: 16px 0 0 16px;
+  margin-left: 5px;
+  color: #83a598; /* Blue */
+}
+
+#pulseaudio.mic {
+  border-radius: 0;
+  color: #d3869b; /* Purple */
+}
+
+#backlight {
+  border-radius: 0;
+  color: #fabd2f; /* Yellow */
+}
+
+#network {
+  border-radius: 0;
+  color: #8ec07c; /* Aqua */
+}
+
+#battery {
+  border-radius: 0 16px 16px 0;
+  margin-right: 5px;
+  color: #d5c4a1; /* Fg2 */
+}
+
+#battery.charging {
+  color: #b8bb26;
+}
+
+#battery.warning:not(.charging) {
+  color: #fabd2f;
+}
+
+#battery.critical:not(.charging) {
+  color: #fb4934;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: #cc241d;
+    color: #fbf1c7;
+  }
+}
+
+#tray {
+  margin: 5px 5px;
+  padding: 5px 10px;
+  border-radius: 16px;
+}
+
+#custom-power {
+  background: #282828;
+  color: #fb4934; /* Gruvbox Red */
+  padding: 5px 10px;
+  margin: 5px 5px;
+  border-radius: 16px;
+  font-size: 18px;
+  min-width: 30px;
+}
+
+/* --- Window Title --- */
+#window {
+  background: #282828;
+  color: #ebdbb2;
+  padding: 5px 15px;
+  margin: 5px 5px;
+  border-radius: 16px;
+  border: 1px solid #928374;
+}
